@@ -14,11 +14,13 @@ const Navbar = () => {
       <Link href="/">
         <div className="w-32 flex justify-center items-center gap-1">
           <Image
-            className="cursor-pointer w-full object-cover"
+            className="cursor-pointer w-full object-cover cursor-pointer"
             src={logo}
             alt="Shorts"
           />
-          <h1 className="text-red-500 text-2xl font-semibold">Shorts</h1>
+          <h1 className="text-[#F9484F] text-[25px] font-bold cursor-pointer">
+            Shorts
+          </h1>
         </div>
       </Link>
     </div>
