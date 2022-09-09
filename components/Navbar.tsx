@@ -14,7 +14,7 @@ const Navbar = () => {
       <Link href="/">
         <div className="w-32 flex justify-center items-center gap-1">
           <Image
-            className="cursor-pointer w-full object-cover cursor-pointer"
+            className="cursor-pointer w-full object-cover"
             src={logo}
             alt="Shorts"
           />
