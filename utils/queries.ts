@@ -12,7 +12,7 @@ export const allVideosQuery = () => {
       postedBy->{
         _id,
         userName,
-        image
+        profileImage
       },
     likes,
     comments[]{
@@ -21,7 +21,7 @@ export const allVideosQuery = () => {
       postedBy->{
       _id,
       userName,
-      image
+      profileImage
     },
     }
   }`;
@@ -43,7 +43,7 @@ export const postDetailQuery = (postId: string | string[]) => {
     postedBy->{
       _id,
       userName,
-      image
+      profileImage
     },
      likes,
     comments[]{
@@ -72,7 +72,7 @@ export const searchVideosQuery = (searchTerm: string | string[]) => {
     postedBy->{
       _id,
       userName,
-      image
+      profileImage
     },
 likes,
     comments[]{
@@ -81,7 +81,7 @@ likes,
       postedBy->{
       _id,
       userName,
-      image
+      profileImage
     },
     }
   }`;
@@ -114,7 +114,7 @@ export const userCreatedVideosQuery = (userId: string | string[]) => {
     postedBy->{
       _id,
       userName,
-      image
+      profileImage
     },
  likes,
 
@@ -124,7 +124,7 @@ export const userCreatedVideosQuery = (userId: string | string[]) => {
       postedBy->{
       _id,
       userName,
-      image
+      profileImage
     },
     }
   }`;
@@ -146,7 +146,7 @@ export const userLikedVideosQuery = (userId: string | string[]) => {
     postedBy->{
       _id,
       userName,
-      image
+      profileImage
     },
  likes,
 
@@ -156,7 +156,7 @@ export const userLikedVideosQuery = (userId: string | string[]) => {
       postedBy->{
       _id,
       userName,
-      image
+      profileImage
     },
     }
   }`;
@@ -178,7 +178,7 @@ export const topicVideosQuery = (topic: string | string[]) => {
     postedBy->{
       _id,
       userName,
-      image
+      profileImage
     },
  likes,
 
@@ -188,7 +188,7 @@ export const topicVideosQuery = (topic: string | string[]) => {
       postedBy->{
       _id,
       userName,
-      image
+      profileImage
     },
     }
   }`;
