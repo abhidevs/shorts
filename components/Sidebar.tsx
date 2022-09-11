@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import GoogleLogin from "react-google-login";
 import { AiFillHome, AiOutlineMenu } from "react-icons/ai";
 import { ImCancelCircle } from "react-icons/im";
 import Link from "next/link";
@@ -39,23 +38,7 @@ const Sidebar = () => {
           {!userLoggedIn && (
             <div className="px-2 py-4 hidden xl:block">
               <p className="text-gray-500">Log in to explore more</p>
-              <div className="pr-4">
-                <GoogleLogin
-                  clientId=""
-                  render={(renderProps) => (
-                    <button
-                      className="cursor-pointer bg-white text-lg text-[#F9484F] border-2 border-[#F9484F] font-semibold px-6 py-3 rounded-md outline-none w-full max-w-32 mt-3 hover:text-white hover:bg-[#F9484F]"
-                      onClick={renderProps.onClick}
-                      disabled={renderProps.disabled}
-                    >
-                      Log in
-                    </button>
-                  )}
-                  onSuccess={() => {}}
-                  onFailure={() => {}}
-                  cookiePolicy="single_host_origin"
-                />
-              </div>
+              <div className="pr-4"></div>
             </div>
           )}
 
