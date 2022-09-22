@@ -6,6 +6,7 @@ import Link from "next/link";
 import Discover from "./Discover";
 import SuggestedAccounts from "./SuggestedAccounts";
 import Footer from "./Footer";
+import useAuthStore from "../store/authStore";
 
 // styles
 const normalLink =
@@ -13,7 +14,7 @@ const normalLink =
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(true);
-  const userLoggedIn = false;
+  const { user } = useAuthStore();
 
   return (
     <div>
@@ -35,7 +36,7 @@ const Sidebar = () => {
               </div>
             </Link>
           </div>
-          {!userLoggedIn && (
+          {!user && (
             <div className="px-2 py-4 hidden xl:block">
               <p className="text-gray-500">Log in to explore more</p>
               <div className="pr-4"></div>
