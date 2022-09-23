@@ -6,6 +6,7 @@ import Link from "next/link";
 import { HiVolumeUp, HiVolumeOff } from "react-icons/hi";
 import { BsPlay, BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
+import { VIDEOS } from "../constants/routes";
 
 interface IProps {
   video: Video;
@@ -68,7 +69,7 @@ const VideoCard: NextPage<IProps> = ({ video }) => {
           onMouseLeave={() => setIsHover(false)}
           className="rounded-3xl"
         >
-          <Link href={`/video/${video._id}`}>
+          <Link href={`${VIDEOS}/${video._id}`}>
             <video
               src={video.video.asset.url}
               ref={videoRef}

@@ -1,5 +1,6 @@
 import axios from "axios";
 import jwt_decode from "jwt-decode";
+import { API_URL } from "../constants/routes";
 
 export const createOrGetUser = async (res: any, addUser: any) => {
   const decodedJWT: {
@@ -21,7 +22,7 @@ export const createOrGetUser = async (res: any, addUser: any) => {
 
   addUser(user);
 
-  await axios.post(`http://localhost:3000/api/auth`, user);
+  await axios.post(`${API_URL}/auth`, user);
 
   console.log(decodedJWT);
 };

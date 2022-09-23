@@ -9,6 +9,7 @@ import { IoMdAdd } from "react-icons/io";
 import logo from "../assets/images/logo_flat_transparent.png";
 import { createOrGetUser } from "../utils/auth";
 import useAuthStore from "../store/authStore";
+import { CREATE } from "../constants/routes";
 
 const Navbar = () => {
   const { user, addUser, removeUser } = useAuthStore();
@@ -33,7 +34,7 @@ const Navbar = () => {
       <div>
         {user ? (
           <div className="flex gap-5 md:gap-10">
-            <Link href="/create">
+            <Link href={`${CREATE}`}>
               <button className="border-2 px-1 md:px-4 text-md font-semibold flex items-center gap-2">
                 <IoMdAdd className="text-xl" />{" "}
                 <span className="hidden md:block">Create</span>

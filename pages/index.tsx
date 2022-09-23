@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import NoResults from "../components/NoResults";
 import VideoCard from "../components/VideoCard";
+import { API_URL } from "../constants/routes";
 import { Video } from "../types";
 
 interface IProps {
@@ -33,13 +34,19 @@ const Home = ({ videos }: IProps) => {
 };
 
 export const getServerSideProps = async () => {
-  const { data } = await axios.get(`http://localhost:3000/api/videos`);
-
-  return {
-    props: {
-      videos: data,
-    },
-  };
+  try {
+    const { data } = await axios.get(`${API_URL}/videos`);
+    return {
+      props: {
+        videos: data,
+      },
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      props: {},
+    };
+  }
 };
 
 export default Home;

@@ -7,7 +7,8 @@ import axios from "axios";
 import useAuthStore from "../store/authStore";
 import { client } from "../utils/client";
 import { SanityAssetDocument } from "@sanity/client";
-import { topics } from "../utils/constants";
+import { API_URL } from "../constants/routes";
+import { topics } from "../constants/topics";
 
 const Create = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -64,7 +65,7 @@ const Create = () => {
         topic: category,
       };
 
-      await axios.post("http://localhost:3000/api/videos", videoDocument);
+      await axios.post(`${API_URL}/videos`, videoDocument);
       router.push("/");
     }
   };
