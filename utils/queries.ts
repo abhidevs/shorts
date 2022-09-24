@@ -29,8 +29,8 @@ export const allVideosQuery = () => {
   return query;
 };
 
-export const postDetailQuery = (postId: string | string[]) => {
-  const query = `*[_type == "video" && _id == '${postId}']{
+export const videoDetailQuery = (videoId: string | string[]) => {
+  const query = `*[_type == "video" && _id == '${videoId}']{
     _id,
      caption,
        video{
